@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Calango Store</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+  </head>
+  <body>
+    <h1>Calango Tees Store</h1>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Descrição</th>
+          <th>Preço</th>
+          <th>Quantidade</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @produtos_por_nome.each do |produto| %>
+        <tr>
+          <th><%= produto.nome %></th>
+          <th><%= produto.descricao %></th>
+          <th><%= produto.preco %></th>
+          <th><%= produto.quantidade %></th>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+    <br>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Descrição</th>
+          <th>Preço</th>
+          <th>Quantidade</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @produtos_por_preco.each do |produto| %>
+        <tr>
+          <th><%= produto.nome %></th>
+          <th><%= produto.descricao %></th>
+          <th><%= produto.preco %></th>
+          <th><%= produto.quantidade %></th>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </body>
+</html>
